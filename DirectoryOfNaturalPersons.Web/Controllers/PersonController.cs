@@ -17,8 +17,8 @@ public class PersonController : Controller
 
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status200OK)]
-    [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<IActionResult> Create([FromBody] CreatePersonCommand request, CancellationToken cancellationToken)
+    [ProducesResponseType(StatusCodes.Status409Conflict)]
+    public async Task<IActionResult> Create([FromBody] CreatePersonCommand request,CancellationToken cancellationToken)
     {
         var result = await _sender.Send(request, cancellationToken);
         return Ok(result);

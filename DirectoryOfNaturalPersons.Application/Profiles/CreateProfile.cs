@@ -19,9 +19,9 @@ public class CreateProfile : Profile
 
         CreateMap<PersonDTO, PersonModel>();
         CreateMap<PersonModel, PersonDTO>();
-        
-        CreateMap<PhoneNumberDTO, PhoneNumberModel>();
+
         CreateMap<PhoneNumberModel, PhoneNumberDTO>();
+        CreateMap<PhoneNumberDTO, PhoneNumberModel>();
 
     }
 }

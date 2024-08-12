@@ -1,6 +1,8 @@
+using System.Net;
 using AutoMapper;
 using DirectoryOfNaturalPersons.Application.Models;
 using DirectoryOfNaturalPersons.Domain.Entities;
+using DirectoryOfNaturalPersons.Domain.Exceptions;
 using DirectoryOfNaturalPersons.Domain.Interface;
 using MediatR;
 
@@ -19,12 +21,20 @@ public class CreatePersonHandler : IRequestHandler<CreatePersonCommand, PersonMo
         _unitOfWork = unitOfWork;
     }
 
-
     public async Task<PersonModel> Handle(CreatePersonCommand request, CancellationToken cancellationToken)
     {
+        var existingPerson = await _repository.GetPersonByPersonalIdAsync(request.PersonalId, cancellationToken);
+        if (existingPerson is not null)
+        {
+            throw new HttpException($"Person with PersonalId: {request.PersonalId} already exists.",
+                HttpStatusCode.Conflict);
+        }
+
         var person = _mapper.Map<PersonDTO>(request);
+
         await _repository.InsertAsync(person, cancellationToken);
         await _unitOfWork.CommitAsync(cancellationToken);
+
         return _mapper.Map<PersonModel>(person);
     }
 }

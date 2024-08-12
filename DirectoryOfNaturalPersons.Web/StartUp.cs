@@ -61,10 +61,11 @@ public class StartUp
         builder.Services.AddScoped<IPersonRepository, PersonRepository>();
         builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
         builder.Services.AddAutoMapper(typeof(CreateProfile).Assembly);
-        
+
         builder.Services.AddSingleton<IResourceManagerService>(_ =>
         {
-            var resourceManager = new ResourceManager("DirectoryOfNaturalPersons.Application.Resources.SharedResource", applicationAssembly);
+            var resourceManager = new ResourceManager("DirectoryOfNaturalPersons.Application.Resources.SharedResource",
+                applicationAssembly);
             return new ResourceManagerService(resourceManager);
         });
 
@@ -77,13 +78,14 @@ public class StartUp
         dbInitializer.SeedAsync(app.Services, CancellationToken.None).Wait();
 
         app.UseMiddleware<AcceptLanguageMiddleware>();
-        
+        app.UseMiddleware<ErrorLoggingMiddleware>();
+
         if (app.Environment.IsDevelopment())
         {
             app.UseSwagger();
             app.UseSwaggerUI();
         }
-        
+
         app.UseHttpsRedirection();
         app.UseAuthorization();
         app.MapControllers();

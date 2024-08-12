@@ -1,3 +1,5 @@
+using MediatR;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace DirectoryOfNaturalPersons.Middlewares;
@@ -8,10 +10,32 @@ public class ValidationActionFilter : IAsyncActionFilter
     {
         if (!context.ModelState.IsValid)
         {
-            var response = new BadHttpRequestException("One or more validation errors occurred");
+            var errors = context.ModelState.ToDictionary(
+                kvp => kvp.Key,
+                kvp => kvp.Value.Errors.Select(e => e.ErrorMessage).ToList()
+            );
+
+            var response = new BadRequestResponse("One or more validation errors occurred.");
+
+            context.Result = new BadRequestObjectResult(new
+            {
+                Errors = errors,
+                Error = response.Message
+            });
+
             return;
         }
 
         await next();
+    }
+}
+
+public class BadRequestResponse : IRequest<IActionResult>
+{
+    public string Message { get; }
+
+    public BadRequestResponse(string message)
+    {
+        Message = message;
     }
 }
