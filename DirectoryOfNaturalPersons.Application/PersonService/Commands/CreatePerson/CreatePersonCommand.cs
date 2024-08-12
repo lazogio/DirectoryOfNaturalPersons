@@ -1,4 +1,3 @@
-using System.Text.Json.Serialization;
 using DirectoryOfNaturalPersons.Application.Models;
 using DirectoryOfNaturalPersons.Domain.Enums;
 using MediatR;

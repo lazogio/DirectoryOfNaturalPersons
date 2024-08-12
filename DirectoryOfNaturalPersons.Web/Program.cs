@@ -1,4 +1,3 @@
-using DirectoryOfNaturalPersons;
 using Serilog;
 
 public class Program

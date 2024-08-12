@@ -1,7 +1,10 @@
+using System.Resources;
 using System.Text.Json.Serialization;
 using DirectoryOfNaturalPersons.Application;
+using DirectoryOfNaturalPersons.Application.Interface;
 using DirectoryOfNaturalPersons.Application.PipelineBehaviour;
 using DirectoryOfNaturalPersons.Application.Profiles;
+using DirectoryOfNaturalPersons.Application.ResourceManagerService;
 using DirectoryOfNaturalPersons.Domain.Interface;
 using DirectoryOfNaturalPersons.Middlewares;
 using DirectoryOfNaturalPersons.Persistence;
@@ -44,21 +47,8 @@ public class StartUp
                 Title = "Directory Of Natural Persons",
                 Version = "v1"
             });
-         //   c.OperationFilter<AcceptLanguageMiddleware.CustomHeaderSwaggerAttribute>();
+            c.OperationFilter<AcceptLanguageMiddleware.CustomHeaderSwaggerAttribute>();
         });
-
-        // builder.Services.AddApiVersioning(options =>
-        //     {
-        //         options.AssumeDefaultVersionWhenUnspecified = true;
-        //         options.DefaultApiVersion = new ApiVersion(1, 0);
-        //         options.ReportApiVersions = true;
-        //         options.ApiVersionReader = ApiVersionReader.Combine(new HeaderApiVersionReader());
-        //     })
-        //     .AddApiExplorer(options =>
-        //     {
-        //         options.GroupNameFormat = "'v'V";
-        //         options.SubstituteApiVersionInUrl = true;
-        //     });
 
         builder.Services.AddHttpContextAccessor();
         builder.Services.AddMediatR(applicationAssembly);
@@ -71,13 +61,12 @@ public class StartUp
         builder.Services.AddScoped<IPersonRepository, PersonRepository>();
         builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
         builder.Services.AddAutoMapper(typeof(CreateProfile).Assembly);
-
-        // builder.Services.AddSingleton<IResourceManagerService>(_ =>
-        // {
-        //     var resourceManager = new ResourceManager("PersonDictionary.Application.Resources.SharedResource",
-        //         applicationAssembly);
-        //     return new ResourceManagerService(resourceManager);
-        // });
+        
+        builder.Services.AddSingleton<IResourceManagerService>(_ =>
+        {
+            var resourceManager = new ResourceManager("DirectoryOfNaturalPersons.Application.Resources.SharedResource", applicationAssembly);
+            return new ResourceManagerService(resourceManager);
+        });
 
         builder.Services.AddFluentValidationAutoValidation().AddFluentValidationClientsideAdapters();
     }
@@ -87,21 +76,14 @@ public class StartUp
         var dbInitializer = new DbInitializer();
         dbInitializer.SeedAsync(app.Services, CancellationToken.None).Wait();
 
-      //  app.UseMiddleware<AcceptLanguageMiddleware>();
-       // app.UseMiddleware<ErrorLoggingMiddleware>();
-
+        app.UseMiddleware<AcceptLanguageMiddleware>();
+        
         if (app.Environment.IsDevelopment())
         {
             app.UseSwagger();
             app.UseSwaggerUI();
         }
-
-        // app.NewApiVersionSet()
-        //     .HasApiVersion(new ApiVersion(1, 0))
-        //     .HasApiVersion(new ApiVersion(2, 0))
-        //     .ReportApiVersions()
-        //     .Build();
-
+        
         app.UseHttpsRedirection();
         app.UseAuthorization();
         app.MapControllers();

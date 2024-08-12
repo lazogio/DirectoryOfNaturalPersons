@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DirectoryOfNaturalPersons.Controllers;
 
-[Route("api/[controller]/[action]")]
+[Route("v1/[controller]/[action]")]
 [ApiController]
 public class PersonController : Controller
 {
@@ -17,10 +17,11 @@ public class PersonController : Controller
 
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status200OK)]
-    [ProducesResponseType(StatusCodes.Status409Conflict)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public async Task<IActionResult> Create([FromBody] CreatePersonCommand request, CancellationToken cancellationToken)
     {
         var result = await _sender.Send(request, cancellationToken);
         return Ok(result);
     }
+   
 }
