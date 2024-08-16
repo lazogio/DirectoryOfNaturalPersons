@@ -1,6 +1,6 @@
 using DirectoryOfNaturalPersons.Domain.Enums;
 
-namespace DirectoryOfNaturalPersons.Application.Models;
+namespace DirectoryOfNaturalPersons.Domain.Models;
 
 public class PhoneNumberModel
 {

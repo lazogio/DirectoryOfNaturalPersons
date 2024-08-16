@@ -53,7 +53,6 @@ namespace DirectoryOfNaturalPersons.Middlewares
             public void Apply(OpenApiOperation operation, OperationFilterContext context)
             {
                 operation.Parameters ??= new List<OpenApiParameter>();
-
                 operation.Parameters.Add(new OpenApiParameter
                 {
                     Name = "Accept-Language",

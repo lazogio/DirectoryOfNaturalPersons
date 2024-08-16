@@ -21,9 +21,7 @@ public class ErrorLoggingMiddleware
         }
         catch (Exception ex)
         {
-            // Log the exception
             Log.Error(ex, ex.Message);
-
             var code = (int)HttpStatusCode.InternalServerError;
             var response = new FailedRequestResponse();
 
@@ -32,7 +30,6 @@ public class ErrorLoggingMiddleware
                 code = (int)httpException.Code;
                 response.Message = ex.Message;
                 response.ErrorCode = code.ToString();
-                response.Details = null;
             }
             else if (ex is BadRequestException badRequestException)
             {
@@ -53,18 +50,6 @@ public class ErrorLoggingMiddleware
                     response.Message = ex.Message;
                     response.ErrorCode = code.ToString();
                 }
-            }
-            else if (ex is UnprocessableEntityException unprocessableEntityException)
-            {
-                foreach (var item in unprocessableEntityException.ValidationResult.Errors)
-                {
-                    if (!response.Details.ContainsKey(item.PropertyName))
-                    {
-                        response.Details.Add(item.PropertyName, item.ErrorMessage);
-                    }
-                }
-
-                code = (int)HttpStatusCode.UnprocessableEntity;
             }
             else if (ex is ArgumentNullException && ex.Source == "MediatR")
             {

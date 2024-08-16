@@ -14,6 +14,8 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
+namespace DirectoryOfNaturalPersons;
+
 public class StartUp
 {
     public static WebApplication InitializeApp(string[] args)

@@ -26,7 +26,7 @@ public class ValidationBehavior<TRequest, TResponse> : IPipelineBehavior<TReques
             .Select(x => x.Validate(context))
             .SelectMany(x => x.Errors)
             .Where(x => x != null);
-        
+
         if (errors.Any())
         {
             throw new ValidationException(errors);

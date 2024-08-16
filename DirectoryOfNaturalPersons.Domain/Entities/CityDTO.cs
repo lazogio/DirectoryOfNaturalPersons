@@ -4,7 +4,7 @@ public class CityDTO : EntityDTO
 {
     public string NameKa { get; set; }
     public string NameEn { get; set; }
-    public string LocationN { get; set; }
+    public string Location { get; set; }
 
     public void SetCreateDate()
     {

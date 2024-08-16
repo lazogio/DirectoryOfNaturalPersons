@@ -16,15 +16,9 @@ public class PersonConfiguration : IEntityTypeConfiguration<PersonDTO>
             .WithOne(x => x.PersonDto)
             .HasForeignKey(x => x.PersonId)
             .OnDelete(DeleteBehavior.Cascade);
-
         builder.HasMany(x => x.RelatedPersons)
             .WithOne(x => x.PersonDto)
             .HasForeignKey(x => x.PersonId)
             .OnDelete(DeleteBehavior.Cascade);
-
-        builder.HasMany(x => x.RelatedToPersons)
-            .WithOne(x => x.RelatedPersonDto)
-            .HasForeignKey(x => x.RelatedPersonId)
-            .OnDelete(DeleteBehavior.Restrict);
     }
 }

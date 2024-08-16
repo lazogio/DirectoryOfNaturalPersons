@@ -24,8 +24,4 @@
       <ProjectReference Include="..\DirectoryOfNaturalPersons.Domain\DirectoryOfNaturalPersons.Domain.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="PersonService\Queries\" />
-    </ItemGroup>
-
 </Project>

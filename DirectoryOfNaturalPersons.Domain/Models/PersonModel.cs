@@ -1,6 +1,6 @@
 using DirectoryOfNaturalPersons.Domain.Enums;
 
-namespace DirectoryOfNaturalPersons.Application.Models;
+namespace DirectoryOfNaturalPersons.Domain.Models;
 
 public class PersonModel
 {
@@ -9,7 +9,7 @@ public class PersonModel
     public string LastName { get; set; }
     public string PersonalId { get; set; }
     public DateTime BirthDate { get; set; }
-    public String City { get; set; }
-    public Gender gender { get; set; }
+    public string City { get; set; }
+    public Gender Gender { get; set; }
     public IEnumerable<PhoneNumberModel> PhoneNumbers { get; set; }
 }

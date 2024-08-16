@@ -11,9 +11,11 @@ public class PersonRelationConfiguration : IEntityTypeConfiguration<PersonRelati
         builder.HasKey(x => new { x.PersonId, x.RelatedPersonId });
         builder.HasOne(x => x.PersonDto)
             .WithMany(x => x.RelatedPersons)
-            .HasForeignKey(x => x.PersonId);
+            .HasForeignKey(x => x.PersonId)
+            .OnDelete(DeleteBehavior.Cascade);
         builder.HasOne(x => x.RelatedPersonDto)
-            .WithMany(x => x.RelatedToPersons)
-            .HasForeignKey(x => x.RelatedPersonId);
+            .WithMany()
+            .HasForeignKey(x => x.RelatedPersonId)
+            .OnDelete(DeleteBehavior.Restrict);
     }
 }

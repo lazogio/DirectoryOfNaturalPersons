@@ -3,16 +3,15 @@ using DirectoryOfNaturalPersons.Domain.Constants;
 using DirectoryOfNaturalPersons.Domain.Enums;
 using FluentValidation;
 
-namespace DirectoryOfNaturalPersons.Application.PersonService.Commands.CreatePerson;
+namespace DirectoryOfNaturalPersons.Application.PersonService.Commands.UpdatePerson;
 
-public class CreatePersonValidator : AbstractValidator<CreatePersonCommand>
+public class UpdatePersonValidator : AbstractValidator<UpdatePersonCommand>
 {
-    private readonly IResourceManagerService _resourceManager;
+    private readonly IResourceManagerService _resourceManagerService;
 
-    public CreatePersonValidator(IResourceManagerService resourceManager)
+    public UpdatePersonValidator(IResourceManagerService resourceManagerService)
     {
-        _resourceManager = resourceManager;
-
+        _resourceManagerService = resourceManagerService;
         RuleFor(x => x.FirstName)
             .NotNull()
             .WithMessage(GetResourceString(ValidationMessages.FirstNameIsRequired))
@@ -37,38 +36,31 @@ public class CreatePersonValidator : AbstractValidator<CreatePersonCommand>
 
         RuleFor(x => x.BirthDate)
             .NotNull()
-            .WithMessage(GetResourceString(ValidationMessages.BirthDateIsRequired))
+            .WithMessage(ValidationMessages.BirthDateIsRequired)
             .LessThan(DateTime.Now.AddYears(-18))
             .WithMessage(GetResourceString(ValidationMessages.PersonMustBeAtLeast18YearsOldToRegister));
 
         RuleFor(x => x.PhoneNumbers)
             .NotNull()
-            .WithMessage(GetResourceString(ValidationMessages.PhoneNumbersCannotBeNull))
+            .WithMessage(ValidationMessages.PhoneNumbersCannotBeNull)
             .Must(x => x.Any())
             .WithMessage(GetResourceString(ValidationMessages.AtLeastOnePhoneNumberMustBeProvided));
 
-        RuleFor(x => x.CityId)
-            .NotNull()
-            .WithMessage("CityId is required")
-            .GreaterThan(0)
-            .WithMessage("CityId must be greater than 0");
-
         RuleForEach(x => x.PhoneNumbers)
             .ChildRules(phoneNumber =>
-                {
-                    phoneNumber.RuleFor(x => x.Number)
-                        .Length(4, 50)
-                        .WithMessage(GetResourceString(ValidationMessages.NumberInvalidLength));
+            {
+                phoneNumber.RuleFor(x => x.Number)
+                    .Length(4, 50)
+                    .WithMessage(GetResourceString(ValidationMessages.NumberInvalidLength));
 
-                    phoneNumber.RuleFor(x => x.NumberType)
-                        .Must(x => Enum.TryParse<PhoneNumberType>(x.ToString(), out _))
-                        .WithMessage(GetResourceString(ValidationMessages.NumberInvalidType));
-                }
-            );
+                phoneNumber.RuleFor(x => x.NumberType)
+                    .Must(x => Enum.TryParse<PhoneNumberType>(x.ToString(), out _))
+                    .WithMessage(GetResourceString(ValidationMessages.NumberInvalidType));
+            });
     }
 
     private string? GetResourceString(string key)
     {
-        return _resourceManager.GetString(key);
+        return _resourceManagerService.GetString(key);
     }
 }

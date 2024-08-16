@@ -22,4 +22,9 @@
       <ProjectReference Include="..\DirectoryOfNaturalPersons.Persistence\DirectoryOfNaturalPersons.Persistence.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="logs\" />
+      <Folder Include="wwwroot\images\" />
+    </ItemGroup>
+
 </Project>
