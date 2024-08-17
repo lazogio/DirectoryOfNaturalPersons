@@ -1,0 +1,120 @@
+2024-08-17 23:21:46.390 +04:00 [FTL] Application start-up failed
+System.IO.DirectoryNotFoundException: /Users/lazareshvilig/RiderProjects/DirectoryOfNaturalPerson/DirectoryOfNaturalPersons.Web/wwwroot/
+   at Microsoft.Extensions.FileProviders.PhysicalFileProvider..ctor(String root, ExclusionFilters filters)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsLoader.<>c.<UseStaticWebAssetsCore>b__1_0(String contentRoot)
+   at Microsoft.AspNetCore.StaticWebAssets.ManifestStaticWebAssetFileProvider..ctor(StaticWebAssetManifest manifest, Func`2 fileProviderFactory)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsLoader.UseStaticWebAssetsCore(IWebHostEnvironment environment, Stream manifest)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsLoader.UseStaticWebAssets(IWebHostEnvironment environment, IConfiguration configuration)
+   at Microsoft.AspNetCore.Hosting.BootstrapHostBuilder.RunDefaultCallbacks()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder..ctor(WebApplicationOptions options, Action`1 configureDefaults)
+   at Microsoft.AspNetCore.Builder.WebApplication.CreateBuilder(String[] args)
+   at DirectoryOfNaturalPersons.StartUp.InitializeApp(String[] args) in /Users/lazareshvilig/RiderProjects/DirectoryOfNaturalPersons/DirectoryOfNaturalPersons.Web/StartUp.cs:line 23
+   at DirectoryOfNaturalPersons.Program.Main(String[] args) in /Users/lazareshvilig/RiderProjects/DirectoryOfNaturalPersons/DirectoryOfNaturalPersons.Web/Program.cs:line 28
+2024-08-17 23:22:12.823 +04:00 [FTL] Application start-up failed
+System.IO.DirectoryNotFoundException: /Users/lazareshvilig/RiderProjects/DirectoryOfNaturalPerson/DirectoryOfNaturalPersons.Web/wwwroot/
+   at Microsoft.Extensions.FileProviders.PhysicalFileProvider..ctor(String root, ExclusionFilters filters)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsLoader.<>c.<UseStaticWebAssetsCore>b__1_0(String contentRoot)
+   at Microsoft.AspNetCore.StaticWebAssets.ManifestStaticWebAssetFileProvider..ctor(StaticWebAssetManifest manifest, Func`2 fileProviderFactory)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsLoader.UseStaticWebAssetsCore(IWebHostEnvironment environment, Stream manifest)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsLoader.UseStaticWebAssets(IWebHostEnvironment environment, IConfiguration configuration)
+   at Microsoft.AspNetCore.Hosting.BootstrapHostBuilder.RunDefaultCallbacks()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder..ctor(WebApplicationOptions options, Action`1 configureDefaults)
+   at Microsoft.AspNetCore.Builder.WebApplication.CreateBuilder(String[] args)
+   at DirectoryOfNaturalPersons.StartUp.InitializeApp(String[] args) in /Users/lazareshvilig/RiderProjects/DirectoryOfNaturalPersons/DirectoryOfNaturalPersons.Web/StartUp.cs:line 23
+   at DirectoryOfNaturalPersons.Program.Main(String[] args) in /Users/lazareshvilig/RiderProjects/DirectoryOfNaturalPersons/DirectoryOfNaturalPersons.Web/Program.cs:line 28
+2024-08-17 23:22:24.918 +04:00 [FTL] Application start-up failed
+System.IO.DirectoryNotFoundException: /Users/lazareshvilig/RiderProjects/DirectoryOfNaturalPerson/DirectoryOfNaturalPersons.Web/wwwroot/
+   at Microsoft.Extensions.FileProviders.PhysicalFileProvider..ctor(String root, ExclusionFilters filters)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsLoader.<>c.<UseStaticWebAssetsCore>b__1_0(String contentRoot)
+   at Microsoft.AspNetCore.StaticWebAssets.ManifestStaticWebAssetFileProvider..ctor(StaticWebAssetManifest manifest, Func`2 fileProviderFactory)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsLoader.UseStaticWebAssetsCore(IWebHostEnvironment environment, Stream manifest)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsLoader.UseStaticWebAssets(IWebHostEnvironment environment, IConfiguration configuration)
+   at Microsoft.AspNetCore.Hosting.BootstrapHostBuilder.RunDefaultCallbacks()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder..ctor(WebApplicationOptions options, Action`1 configureDefaults)
+   at Microsoft.AspNetCore.Builder.WebApplication.CreateBuilder(String[] args)
+   at DirectoryOfNaturalPersons.StartUp.InitializeApp(String[] args) in /Users/lazareshvilig/RiderProjects/DirectoryOfNaturalPersons/DirectoryOfNaturalPersons.Web/StartUp.cs:line 23
+   at DirectoryOfNaturalPersons.Program.Main(String[] args) in /Users/lazareshvilig/RiderProjects/DirectoryOfNaturalPersons/DirectoryOfNaturalPersons.Web/Program.cs:line 28
+2024-08-17 23:22:38.841 +04:00 [FTL] Application start-up failed
+System.IO.DirectoryNotFoundException: /Users/lazareshvilig/RiderProjects/DirectoryOfNaturalPerson/DirectoryOfNaturalPersons.Web/wwwroot/
+   at Microsoft.Extensions.FileProviders.PhysicalFileProvider..ctor(String root, ExclusionFilters filters)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsLoader.<>c.<UseStaticWebAssetsCore>b__1_0(String contentRoot)
+   at Microsoft.AspNetCore.StaticWebAssets.ManifestStaticWebAssetFileProvider..ctor(StaticWebAssetManifest manifest, Func`2 fileProviderFactory)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsLoader.UseStaticWebAssetsCore(IWebHostEnvironment environment, Stream manifest)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsLoader.UseStaticWebAssets(IWebHostEnvironment environment, IConfiguration configuration)
+   at Microsoft.AspNetCore.Hosting.BootstrapHostBuilder.RunDefaultCallbacks()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder..ctor(WebApplicationOptions options, Action`1 configureDefaults)
+   at Microsoft.AspNetCore.Builder.WebApplication.CreateBuilder(String[] args)
+   at DirectoryOfNaturalPersons.StartUp.InitializeApp(String[] args) in /Users/lazareshvilig/RiderProjects/DirectoryOfNaturalPersons/DirectoryOfNaturalPersons.Web/StartUp.cs:line 23
+   at DirectoryOfNaturalPersons.Program.Main(String[] args) in /Users/lazareshvilig/RiderProjects/DirectoryOfNaturalPersons/DirectoryOfNaturalPersons.Web/Program.cs:line 28
+2024-08-17 23:25:09.133 +04:00 [FTL] Application start-up failed
+System.IO.DirectoryNotFoundException: /Users/lazareshvilig/RiderProjects/DirectoryOfNaturalPerson/DirectoryOfNaturalPersons.Web/wwwroot/
+   at Microsoft.Extensions.FileProviders.PhysicalFileProvider..ctor(String root, ExclusionFilters filters)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsLoader.<>c.<UseStaticWebAssetsCore>b__1_0(String contentRoot)
+   at Microsoft.AspNetCore.StaticWebAssets.ManifestStaticWebAssetFileProvider..ctor(StaticWebAssetManifest manifest, Func`2 fileProviderFactory)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsLoader.UseStaticWebAssetsCore(IWebHostEnvironment environment, Stream manifest)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsLoader.UseStaticWebAssets(IWebHostEnvironment environment, IConfiguration configuration)
+   at Microsoft.AspNetCore.Hosting.BootstrapHostBuilder.RunDefaultCallbacks()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder..ctor(WebApplicationOptions options, Action`1 configureDefaults)
+   at Microsoft.AspNetCore.Builder.WebApplication.CreateBuilder(String[] args)
+   at DirectoryOfNaturalPersons.StartUp.InitializeApp(String[] args) in /Users/lazareshvilig/RiderProjects/DirectoryOfNaturalPersons/DirectoryOfNaturalPersons.Web/StartUp.cs:line 23
+   at DirectoryOfNaturalPersons.Program.Main(String[] args) in /Users/lazareshvilig/RiderProjects/DirectoryOfNaturalPersons/DirectoryOfNaturalPersons.Web/Program.cs:line 28
+2024-08-17 23:29:10.102 +04:00 [FTL] Application start-up failed
+System.IO.DirectoryNotFoundException: /Users/lazareshvilig/RiderProjects/DirectoryOfNaturalPerson/DirectoryOfNaturalPersons.Web/wwwroot/
+   at Microsoft.Extensions.FileProviders.PhysicalFileProvider..ctor(String root, ExclusionFilters filters)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsLoader.<>c.<UseStaticWebAssetsCore>b__1_0(String contentRoot)
+   at Microsoft.AspNetCore.StaticWebAssets.ManifestStaticWebAssetFileProvider..ctor(StaticWebAssetManifest manifest, Func`2 fileProviderFactory)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsLoader.UseStaticWebAssetsCore(IWebHostEnvironment environment, Stream manifest)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsLoader.UseStaticWebAssets(IWebHostEnvironment environment, IConfiguration configuration)
+   at Microsoft.AspNetCore.Hosting.BootstrapHostBuilder.RunDefaultCallbacks()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder..ctor(WebApplicationOptions options, Action`1 configureDefaults)
+   at Microsoft.AspNetCore.Builder.WebApplication.CreateBuilder(String[] args)
+   at DirectoryOfNaturalPersons.StartUp.InitializeApp(String[] args) in /Users/lazareshvilig/RiderProjects/DirectoryOfNaturalPersons/DirectoryOfNaturalPersons.Web/StartUp.cs:line 23
+   at DirectoryOfNaturalPersons.Program.Main(String[] args) in /Users/lazareshvilig/RiderProjects/DirectoryOfNaturalPersons/DirectoryOfNaturalPersons.Web/Program.cs:line 28
+2024-08-17 23:29:19.059 +04:00 [FTL] Application start-up failed
+System.IO.DirectoryNotFoundException: /Users/lazareshvilig/RiderProjects/DirectoryOfNaturalPerson/DirectoryOfNaturalPersons.Web/wwwroot/
+   at Microsoft.Extensions.FileProviders.PhysicalFileProvider..ctor(String root, ExclusionFilters filters)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsLoader.<>c.<UseStaticWebAssetsCore>b__1_0(String contentRoot)
+   at Microsoft.AspNetCore.StaticWebAssets.ManifestStaticWebAssetFileProvider..ctor(StaticWebAssetManifest manifest, Func`2 fileProviderFactory)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsLoader.UseStaticWebAssetsCore(IWebHostEnvironment environment, Stream manifest)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsLoader.UseStaticWebAssets(IWebHostEnvironment environment, IConfiguration configuration)
+   at Microsoft.AspNetCore.Hosting.BootstrapHostBuilder.RunDefaultCallbacks()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder..ctor(WebApplicationOptions options, Action`1 configureDefaults)
+   at Microsoft.AspNetCore.Builder.WebApplication.CreateBuilder(String[] args)
+   at DirectoryOfNaturalPersons.StartUp.InitializeApp(String[] args) in /Users/lazareshvilig/RiderProjects/DirectoryOfNaturalPersons/DirectoryOfNaturalPersons.Web/StartUp.cs:line 23
+   at DirectoryOfNaturalPersons.Program.Main(String[] args) in /Users/lazareshvilig/RiderProjects/DirectoryOfNaturalPersons/DirectoryOfNaturalPersons.Web/Program.cs:line 28
+2024-08-17 23:30:35.877 +04:00 [FTL] Application start-up failed
+System.IO.DirectoryNotFoundException: /Users/lazareshvilig/RiderProjects/DirectoryOfNaturalPerson/DirectoryOfNaturalPersons.Web/wwwroot/
+   at Microsoft.Extensions.FileProviders.PhysicalFileProvider..ctor(String root, ExclusionFilters filters)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsLoader.<>c.<UseStaticWebAssetsCore>b__1_0(String contentRoot)
+   at Microsoft.AspNetCore.StaticWebAssets.ManifestStaticWebAssetFileProvider..ctor(StaticWebAssetManifest manifest, Func`2 fileProviderFactory)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsLoader.UseStaticWebAssetsCore(IWebHostEnvironment environment, Stream manifest)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsLoader.UseStaticWebAssets(IWebHostEnvironment environment, IConfiguration configuration)
+   at Microsoft.AspNetCore.Hosting.BootstrapHostBuilder.RunDefaultCallbacks()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder..ctor(WebApplicationOptions options, Action`1 configureDefaults)
+   at Microsoft.AspNetCore.Builder.WebApplication.CreateBuilder(String[] args)
+   at DirectoryOfNaturalPersons.StartUp.InitializeApp(String[] args) in /Users/lazareshvilig/RiderProjects/DirectoryOfNaturalPerson/DirectoryOfNaturalPersons.Web/StartUp.cs:line 23
+   at DirectoryOfNaturalPersons.Program.Main(String[] args) in /Users/lazareshvilig/RiderProjects/DirectoryOfNaturalPerson/DirectoryOfNaturalPersons.Web/Program.cs:line 28
+2024-08-17 23:30:39.480 +04:00 [FTL] Application start-up failed
+System.IO.DirectoryNotFoundException: /Users/lazareshvilig/RiderProjects/DirectoryOfNaturalPerson/DirectoryOfNaturalPersons.Web/wwwroot/
+   at Microsoft.Extensions.FileProviders.PhysicalFileProvider..ctor(String root, ExclusionFilters filters)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsLoader.<>c.<UseStaticWebAssetsCore>b__1_0(String contentRoot)
+   at Microsoft.AspNetCore.StaticWebAssets.ManifestStaticWebAssetFileProvider..ctor(StaticWebAssetManifest manifest, Func`2 fileProviderFactory)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsLoader.UseStaticWebAssetsCore(IWebHostEnvironment environment, Stream manifest)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsLoader.UseStaticWebAssets(IWebHostEnvironment environment, IConfiguration configuration)
+   at Microsoft.AspNetCore.Hosting.BootstrapHostBuilder.RunDefaultCallbacks()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder..ctor(WebApplicationOptions options, Action`1 configureDefaults)
+   at Microsoft.AspNetCore.Builder.WebApplication.CreateBuilder(String[] args)
+   at DirectoryOfNaturalPersons.StartUp.InitializeApp(String[] args) in /Users/lazareshvilig/RiderProjects/DirectoryOfNaturalPerson/DirectoryOfNaturalPersons.Web/StartUp.cs:line 23
+   at DirectoryOfNaturalPersons.Program.Main(String[] args) in /Users/lazareshvilig/RiderProjects/DirectoryOfNaturalPerson/DirectoryOfNaturalPersons.Web/Program.cs:line 28
+2024-08-17 23:30:48.622 +04:00 [FTL] Application start-up failed
+System.IO.DirectoryNotFoundException: /Users/lazareshvilig/RiderProjects/DirectoryOfNaturalPerson/DirectoryOfNaturalPersons.Web/wwwroot/
+   at Microsoft.Extensions.FileProviders.PhysicalFileProvider..ctor(String root, ExclusionFilters filters)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsLoader.<>c.<UseStaticWebAssetsCore>b__1_0(String contentRoot)
+   at Microsoft.AspNetCore.StaticWebAssets.ManifestStaticWebAssetFileProvider..ctor(StaticWebAssetManifest manifest, Func`2 fileProviderFactory)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsLoader.UseStaticWebAssetsCore(IWebHostEnvironment environment, Stream manifest)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsLoader.UseStaticWebAssets(IWebHostEnvironment environment, IConfiguration configuration)
+   at Microsoft.AspNetCore.Hosting.BootstrapHostBuilder.RunDefaultCallbacks()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder..ctor(WebApplicationOptions options, Action`1 configureDefaults)
+   at Microsoft.AspNetCore.Builder.WebApplication.CreateBuilder(String[] args)
+   at DirectoryOfNaturalPersons.StartUp.InitializeApp(String[] args) in /Users/lazareshvilig/RiderProjects/DirectoryOfNaturalPerson/DirectoryOfNaturalPersons.Web/StartUp.cs:line 23
+   at DirectoryOfNaturalPersons.Program.Main(String[] args) in /Users/lazareshvilig/RiderProjects/DirectoryOfNaturalPerson/DirectoryOfNaturalPersons.Web/Program.cs:line 28
